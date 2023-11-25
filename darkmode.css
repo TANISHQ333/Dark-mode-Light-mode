@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --background-color: #fff;
+    --text-color: #555;
+    --title-color: #000;
+    --box-shadow-color: rgba(0, 0, 0, 0.3);
+}
+/* FOR DARK THEME  */
+.dark-theme {
+    --background-color: #000;
+    --text-color: #999;
+    --title-color: #fff;
+    --box-shadow-color: rgba(255, 255, 255, 0.3);
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    transition: background 0.8s, color 0.8s;
+}
+
+.header {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo img {
+    width: 80px;
+    margin-left: -40px;
+    border-radius: 15px;
+}
+
+nav ul {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    margin-right: -25%;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 5px 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: box-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    box-shadow: 0 0 10px var(--box-shadow-color);
+    color: black;
+    background-color: rgb(83, 83, 81);
+}
+
+.toggle-btn {
+    background: #4864ff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 20PX;
+    cursor: pointer;
+    margin-right: -3%;
+}
+
+
+.toggle-btn img {
+    width: 25px;
+    margin-left: 10px;
+}
+
+.content {
+    margin-top: 10%;
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 80px;
+    color: var(--title-color);
+    font-family: serif;
+    font-weight: 600;
+}
+
+.content h1 span {
+    font-family: serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.content a {
+    background: #4864ff;
+    color: #fff;
+    padding: 15px 70px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.content a:hover {
+    color: rgb(249, 7, 7);
+    background-color: yellow;
+}
+
+.img-box img {
+    margin-top: -350px;
+    width: 350px;
+    height: 440px;
+    display: block;
+    border-radius: 15px;
+
+}
+
+.img-box {
+    position: absolute;
+    bottom: right;
+    right: 10%;
+}
