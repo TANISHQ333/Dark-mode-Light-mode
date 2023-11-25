@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark mode</title>
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="darkmode.css">
+    <!-- ICON CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="header">
+        <nav>
+            <a href="#" class="logo"><img
+                    src="https://png.pngtree.com/element_our/sm/20180415/sm_5ad34449bac27.jpg"></a>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US </a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">SUPPORT</a></li>
+            </ul>
+            <div class="toggle-btn" id="btn">
+                <span id="btnText">Dark</span>
+                <i class="ri-moon-line" id="btnIcon"></i>
+            </div>
+        </nav>
+        <div class="content">
+            <h1>Hello</h1>
+            <h1><span>I'm</span> Jack Jones</h1>
+            <p>
+                I'm a interior designer with a passion of design. i always try my best to provide the best experience.
+            </p>
+            <a href="#">Hire Me</a>
+        </div>
+
+        <div class="img-box">
+            <img
+                src="https://media.houseandgarden.co.uk/photos/6329c0c0ed47afb286fe24f7/master/w_320%2Cc_limit/carlos-garcia.jpg">
+        </div>
+    </div>
+    <!-- JS STARTS HERE! -->
+    <script>
+        let btn = document.getElementById("btn");
+        let btnIcon = document.getElementById("btnIcon");
+        let btnText = document.getElementById("btnText");
+
+        btn.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+
+            if (document.body.classList.contains("dark-theme")) {
+                btnIcon.classList.remove("ri-moon-line");
+                btnIcon.classList.add("ri-sun-line");
+                btnText.innerHTML = "Light";
+            } else {
+                btnIcon.classList.remove("ri-sun-line");
+                btnIcon.classList.add("ri-moon-line")
+                btnText.innerHTML = "dark";
+            }
+        }
+    </script>
+</body>
+
+</html>
